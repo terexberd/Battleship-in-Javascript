@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>You Sunk My Battleship!</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	
+	</head>
+	<body>
+	
+	<h1>You Sunk My Battleship!</h1>	
+
+
+<p id="demo"></p>
+
+
+<script>
+  var person1 = prompt("Please enter the first player's name");
+  var person2 = prompt("Please enter the second player's name:");
+
+  if (person1 != null && person2 != null) {
+  	document.getElementById("demo").innerHTML =
+    "Hello, " + person1 + " and " + person2 + "! Click on the board below to fire. If you hit a ship, the tile will change to red color, if you miss, it will change to white. Good luck!";
+   }
+  var carrier = prompt("Enter a string representing placements for an aircraft carrier (5 spaces long). For example: A1 A2 A3 A4 A5");
+  var battleship = prompt("Enter a string representing placements for a battleship (4 spaces long). For example: B6 C6 D6 E6");
+  var submarine = prompt("Enter a string representing placements for a submarine (3 spaces long). For example: H3 I3 J3");
+
+</script>
+	<h2>First Player's Score:</h2>	
+
+    <p id="scoreFirstPlayer"></p>
+
+    <h2>Second Player's Score:</h2>	
+
+    <p id="scoreSecondPlayer"></p>
+
+    <center>	
+
+<p class="horizontal-text">1 2 3 4 5 6 7 8 9 10</p>
+
+<table class="battleship-label">
+<tr>
+
+    <th><p class="vertical-text">A B C D E F G H I J</p></th>
+
+  <th><div id="gameboard"></div></th>
+
+</tr>
+</table>
+
+</center>
+	
+	<script type="text/javascript" src="battleship.js"></script>
+	</body>
+</html>
